@@ -1,31 +1,47 @@
 #!/usr/bin/python3
+"""class Node that defines a node of a singly linked list 
+"""
 class Node:
+    """class Node that defines a node of a singly linked list 
+    """
     def __init__(self, data, next_node=None):
+        """Method that initialize the node.
+        """
         self.data = data
         self.next_node = next_node
 
     @property
     def data(self):
+        """Method that returns data value
+        """
         return self.__data
 
     @data.setter
     def data(self, value):
+        """Method to set the data value of the node
+        """
         if not isinstance(value, int):
             raise TypeError("data must be an integer")
         self.__data = value
 
     @property
     def next_node(self):
+        """Method that returns value of next node
+        """
         return self.__next_node
 
     @next_node.setter
     def next_node(self, value):
+        """Method to set data value of next node
+        """
         if not isinstance(value, Node) and value is not None:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
 
 
 class SinglyLinkedList:
+    """A class thatd efines a singly linked list
+    """
     def __str__(self):
         rtn = ""
         ptr = self.__head
