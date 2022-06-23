@@ -25,7 +25,7 @@ class Square:
         """Method that prints in stdout the square with the character #
         and if size is equal to 0, prints a new line.
         """
-        if size == 0:
+        if self.size == 0:
             print()
         else:
             for i in range(self.__size):
