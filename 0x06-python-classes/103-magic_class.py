@@ -9,6 +9,8 @@ class MagicClass:
     """Class that stores the propertiesof a circumference
     """
     def __init__(self, radius=0):
+        """Method that initialize the radius of the circumference
+        """
         self.__radius = 0
         if type(radius) is not int and type(radius) is not float:
             raise TypeError('radius must be a number')
